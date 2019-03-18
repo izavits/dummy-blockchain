@@ -1,8 +1,4 @@
 import hashlib
-import json
-
-from time import time
-from uuid import uuid4
 
 def proof_of_work(self, last_proof):
     """
