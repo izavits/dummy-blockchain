@@ -12,6 +12,10 @@
 # block. We will also need to add a "proof" to this block, which is the result
 # of mining (proof of work).
 
+# A Proof of Work (PoW) algorithm is how new blocks are created (or mined) on
+# the blockchain. The goal of PoW is to discover a number which solves a problem.
+# The number must be difficult to find but easy to verify.
+
 import hashlib
 import json
 from time import time
