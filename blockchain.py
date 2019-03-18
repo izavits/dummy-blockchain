@@ -16,6 +16,11 @@
 # the blockchain. The goal of PoW is to discover a number which solves a problem.
 # The number must be difficult to find but easy to verify.
 
+# The whole point of blockchains is that they should be decentralized.
+# Being decentralized though, they all should reflect the same chain. This is the
+# problem of Consensus.
+
+
 import hashlib
 import json
 from time import time
