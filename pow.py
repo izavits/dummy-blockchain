@@ -1,6 +1,6 @@
 import hashlib
 
-def proof_of_work(self, last_proof):
+def proof_of_work(last_proof):
     """
     Simple Proof of Work Algorithm:
     - Find a number p' such that hash(pp') contains leading 4 zeroes, where p is the previous p'
@@ -13,6 +13,7 @@ def proof_of_work(self, last_proof):
     proof = 0
     while valid_proof(last_proof, proof) is False:
         proof += 1
+        #print proof
     return proof
 
 def valid_proof(last_proof, proof):
@@ -24,6 +25,6 @@ def valid_proof(last_proof, proof):
     :return: <bool> True if correct, False if not.
     """
 
-    guess = f'{last_proof}{proof}'.encode()
+    guess = ""+str(last_proof)+str(proof)+"".encode()
     guess_hash = hashlib.sha256(guess).hexdigest()
     return guess_hash[:4] == "0000"
